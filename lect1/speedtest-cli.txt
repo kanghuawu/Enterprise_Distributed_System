@@ -1,2 +1,18 @@
 https://github.com/sivel/speedtest-cli
 
+1. us-west-1 [54.183.64.3]
+2. us-gov-west-1 [52.222.9.163]
+3. us-west-2 [54.188.0.0]
+4. us-east-2 [52.14.64.0]
+5. us-east-1 [67.202.0.5]
+6. ca-central-1 [52.60.50.0]
+7. ap-northeast-1 [52.196.63.252]
+8. ap-northeast-2 [52.78.63.252]
+9. eu-west-2 [52.56.34.0]
+10. eu-west-1 [54.73.0.1]
+11. eu-central-1 [52.29.63.252]
+12. sa-east-1 [54.94.0.66]
+13. ap-southeast-1 [52.76.0.2]
+14. ap-southeast-2 [52.64.191.252]
+15. ap-south-1 [35.154.63.252]
+
