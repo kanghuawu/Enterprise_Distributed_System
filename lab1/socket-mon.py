@@ -8,7 +8,7 @@ def AddrPort(tup):
 # Collect all TCP sockets connections
 data = []
 for con in psutil.net_connections(kind='tcp'):
-	if con.laddr and con.raddr:
+	if con.laddr and con.raddr and con.pid:
 		data.append({'pid': con.pid, 'laddr': AddrPort(con.laddr), 'raddr': AddrPort(con.raddr), 'status': con.status})
 col = ['pid', 'laddr', 'raddr', 'status']
 df = pandas.DataFrame(data, columns = col)
