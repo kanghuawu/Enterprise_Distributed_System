@@ -60,7 +60,7 @@ def UpdateRepo(repoURL):
 	
 
 def CloneRepo(repoURL, repoName):
-	
+
 	repo = Repo.clone_from(repoURL, repoName, branch='master')
 	print 'Cloning repo'
 	return repo

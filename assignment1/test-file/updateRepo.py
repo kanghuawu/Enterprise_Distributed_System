@@ -15,19 +15,22 @@ def UpdateRepo(repoURL):
 	repoDir = osp.join(curDir, repoName)
 
 	if(osp.exists(repoDir)):
-		PullRepo(repoURL, repoName)
+		repo = PullRepo(repoURL, repoName)
 	else:
-		CloneRepo(repoURL, repoName)
+		repo = CloneRepo(repoURL, repoName)
+
+	return repo
 	
 
 def CloneRepo(repoURL, repoName):
 	repo = Repo.clone_from(repoURL, repoName, branch='master')
+	return repo
 
 
 def PullRepo(repoURL, repoName):
 	repo = Repo(osp.join(curDir, repoName))
 	repo.remotes.origin.pull()
-
+	return repo
 
 if __name__ == '__main__':
 	repoURL = 'https://github.com/kanghuawu/my-test-repo.git'
