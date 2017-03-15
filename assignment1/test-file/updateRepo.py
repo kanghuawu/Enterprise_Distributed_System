@@ -3,9 +3,6 @@ import os
 import os.path as osp
 
 curDir = os.getcwd()
-repoName = ""
-repDir = ""
-repoURL = ""
 
 def UpdateRepo(repoURL):
 	# confirm or add .git to repo url
@@ -18,16 +15,16 @@ def UpdateRepo(repoURL):
 	repoDir = osp.join(curDir, repoName)
 
 	if(osp.exists(repoDir)):
-		PullRepo(repoURL)
+		PullRepo(repoURL, repoName)
 	else:
-		CloneRepo(repoURL)
+		CloneRepo(repoURL, repoName)
 	
 
-def CloneRepo(repoURL):
+def CloneRepo(repoURL, repoName):
 	repo = Repo.clone_from(repoURL, repoName, branch='master')
 
 
-def PullRepo(repoURL):
+def PullRepo(repoURL, repoName):
 	repo = Repo(osp.join(curDir, repoName))
 	repo.remotes.origin.pull()
 
