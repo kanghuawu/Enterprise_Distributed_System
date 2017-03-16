@@ -4,4 +4,5 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python","app.py"]
-CMD ["default_cmd"]
+# following command will be replace with new argument
+CMD ["https://github.com/kanghuawu/my-test-repo.git"]
