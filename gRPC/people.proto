@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service PeopleSearch {
+  
+  rpc FindByFullName (Name) returns (PeopleInfo) {}
+
+  rpc FindByFirstCharacter (Name) returns (stream PeopleInfo) {}
+
+}
+
+
+message Name {
+  string name = 1;
+}
+
+message Number {
+  string num = 1;
+}
+
+message Company {
+  string company = 1;
+}
+
+message PeopleInfo {
+  Name name = 1;
+  Number num = 2;
+  Company company = 3;
+}
