@@ -6,5 +6,9 @@ This is step-by-step walk through for lab 3 of class cmpe273. The steps are base
 
 * [youtube link](https://www.youtube.com/watch?v=TuGyyTXPQ-U)
 
+Postman console result
+
+![alt text](lab2-postman-console.png "screenshot result")
+
 still working on steps...
 will be posted later...
