@@ -1,0 +1,14 @@
+{
+  "method": "PUT",
+  "body": 
+  {
+      "menu_id": "1234",
+      "store_name": "Pizza Hut",
+      "selection": [
+          "Cheese",
+          "Pepperoni",
+          "Vegetable"
+      ]
+  },
+  "param":{"menu_id": "1234"}
+}

@@ -1,0 +1,4 @@
+{
+  "method": "DELETE",
+  "param":{"menu_id": "1234"}
+}
