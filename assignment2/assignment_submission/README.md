@@ -23,7 +23,7 @@
 ![post_order](picture/6_POST_order.png "post order")
 
 8. PUT order
-![put_order](picture/7_PULL_order.png "pull order")
+![put_order](picture/7_PUT_order.png "pull order")
 
 9. PUT order
-![put_order](picture/8_PULL_order.png "pull order")
+![put_order](picture/8_PUT_order.png "pull order")
