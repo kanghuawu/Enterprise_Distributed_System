@@ -6,7 +6,7 @@ import json
 def respond(err, res=None):
     return {
         'statusCode': '400' if err else '200',
-        'body': err.message if err else json.dumps(res),
+        'body': err.message if err else res,
         'headers': {
             'Content-Type': 'application/json',
         },
@@ -24,6 +24,7 @@ def menu_handler(event, context):
     if operation == 'GET':
         return respond(None, table.get_item(Key=event['param']).get('Item'))
     elif operation == 'POST':
+        
         return respond(None, table.put_item(Item=event['body']))
     elif operation == 'PUT':
         res = table.update_item(
