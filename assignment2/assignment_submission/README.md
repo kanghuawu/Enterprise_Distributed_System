@@ -21,7 +21,7 @@
 5. DELETE menu
 ![delete_menu](picture/5_DELETE_menu.png "delete menu")
 
-6. DELETE menu
+6. GET menu
 ![get_menu](picture/6_GET_menu.png "get menu")
 
 7. POST order
