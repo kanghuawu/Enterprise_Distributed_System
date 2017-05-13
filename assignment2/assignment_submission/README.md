@@ -33,5 +33,5 @@
 9. PUT order
 ![put_order](picture/9_PUT_order.png "pull order")
 
-6. GET menu
+6. GET order
 ![get_menu](picture/10_GET_order.png "get menu")
