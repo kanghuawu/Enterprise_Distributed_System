@@ -6,7 +6,7 @@ import json
 def respond(err, res=None):
     return {
         'statusCode': '400' if err else '200',
-        'body': err.message if err else res,
+        'body': err.message if err else json.dumps(res),
         'headers': {
             'Content-Type': 'application/json',
         },
@@ -15,8 +15,8 @@ def respond(err, res=None):
 def menu_handler(event, context):
     # print("Received event: " + json.dumps(event, indent=2))
     try:
-        table = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('menu')
-    	# table = boto3.resource('dynamodb', region_name='us-west-1').Table('menu')
+        # table = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('menu')
+    	table = boto3.resource('dynamodb', region_name='us-west-1').Table('menu')
     except Exception as not_found:
         print("Table doesn't exist.")
 

@@ -12,7 +12,7 @@ def selectState(order_tb, menu_tb, body):
 def respond(err, res=None):
     return {
         'statusCode': '400' if err else '200',
-        'body': err.message if err else res,
+        'body': err.message if err else json.dumps(res),
         'headers': {
             'Content-Type': 'application/json',
         },
@@ -21,10 +21,10 @@ def respond(err, res=None):
 def order_handler(event, context):
     # print("Received event: " + json.dumps(event, indent=2))
     try:
-        # order_tb = boto3.resource('dynamodb', region_name='us-west-1').Table('order')
-        # menu_tb = boto3.resource('dynamodb', region_name='us-west-1').Table('menu')
-        order_tb = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('order')
-        menu_tb = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('menu')
+        order_tb = boto3.resource('dynamodb', region_name='us-west-1').Table('order')
+        menu_tb = boto3.resource('dynamodb', region_name='us-west-1').Table('menu')
+        # order_tb = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('order')
+        # menu_tb = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url = 'http://127.0.0.1:8000').Table('menu')
     except Exception as not_found:
         print("Table doesn't exist.")
 
@@ -78,7 +78,7 @@ def order_handler(event, context):
                     ':val2': order,
                 })
             msg = {
-                'message': '"Your order costs ' + price.get(input-1) + '. We will email you when the order is ready. Thank you!'
+                'message': 'Your order costs ' + price.get(input-1) + '. We will email you when the order is ready. Thank you!'
             }
         else:
         	msg = {'message': 'Your order is in process. Please wait patiently'}
@@ -87,18 +87,3 @@ def order_handler(event, context):
         return respond(None, res=order_tb.get_item(Key=event['param']).get('Item'))
     else:
         return respond(ValueError('Unsupported method "{}"'.format(operation)))
-
-
-
-'''
-{
-    "menu_id": "XXXX"
-    "order_id": "XXXX",
-    "customer_name": "John Smith",
-    "customer_email": "foobar@gmail.com"
-    "selection": "Cheese",
-    "size": "X-Large",
-    "price": "15.00"
-}
-
-'''

@@ -1,5 +1,7 @@
 ### Assignment Submission
 
+[api_gateway setup](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/api_gateway)
+
 [mypizzashop-menu](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/mypizzashop-menu)
 
 [mypizzashop-order](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/mypizzashop-order)
@@ -19,11 +21,17 @@
 5. DELETE menu
 ![delete_menu](picture/5_DELETE_menu.png "delete menu")
 
+6. DELETE menu
+![get_menu](picture/6_GET_menu.png "get menu")
+
 7. POST order
-![post_order](picture/6_POST_order.png "post order")
+![post_order](picture/7_POST_order.png "post order")
 
 8. PUT order
-![put_order](picture/7_PUT_order.png "pull order")
+![put_order](picture/8_PUT_order.png "pull order")
 
 9. PUT order
-![put_order](picture/8_PUT_order.png "pull order")
+![put_order](picture/9_PUT_order.png "pull order")
+
+6. GET menu
+![get_menu](picture/10_GET_order.png "get menu")
