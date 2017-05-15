@@ -2,9 +2,9 @@
   "method": "POST",
   "body": 
   {   
-    "order_id": "1234",
+    "order_id": "9999",
     "customer_name": "John Smith",
     "customer_email": "foobar@gmail.com",
-    "menu_id": "1234"
+    "menu_id": "789"
   }
 }

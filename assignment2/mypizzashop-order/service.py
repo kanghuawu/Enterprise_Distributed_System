@@ -2,6 +2,7 @@ from __future__ import print_function
 import boto3
 import boto
 import json
+import datetime
 
 def selectState(order_tb, menu_tb, body):
     order_tb.put_item(Item=body)
@@ -69,7 +70,7 @@ def order_handler(event, context):
             order = order_tb.get_item(Key=order_id).get('Item').get('order')
             order['size'] = size.get(input)
             order['price'] = str(price.get(input-1))
-
+            order['order_time'] = str(datetime.datetime.now().strftime('%m-%d-%Y@%H:%M:%S'))
             order_tb.update_item(Key=order_id,
                 UpdateExpression='SET order_status = :val1, #o = :val2',
                 ExpressionAttributeNames={'#o': 'order'},
