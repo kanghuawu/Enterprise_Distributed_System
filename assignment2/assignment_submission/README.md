@@ -6,7 +6,7 @@ api_map_template_res is for mapping response.
 
 - [mypizzashop menu](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/mypizzashop-menu)
 
-[mypizzashop order](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/mypizzashop-order)
+- [mypizzashop order](https://github.com/kanghuawu/cmpe273-spring17/tree/master/assignment2/mypizzashop-order)
 
 1. POST menu
 ![post_menu](picture/1_POST_menu.png "post menu")
