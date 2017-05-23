@@ -27,7 +27,7 @@ class DBServicer(db_pb2.DBServicer):
 
     def put(self, request, context):
         print "Saving data into the DB...\n", request.data
-        key = uuid.uuid4().hex
+        # key = uuid.uuid4().hex
 
         # print "================="
         # print "This is request: "
@@ -39,6 +39,7 @@ class DBServicer(db_pb2.DBServicer):
         # print context
         # print "================="
         value = request.data
+        key = request.data.entry['id']
         self.map[key] = value
         return db_pb2.PutResponse(id=key)
 
