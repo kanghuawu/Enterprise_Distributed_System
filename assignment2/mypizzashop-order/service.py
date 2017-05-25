@@ -36,6 +36,7 @@ def order_handler(event, context):
             'menu_id': body['menu_id'],
             'order_id': body['order_id'],
             'customer_name': body['customer_name'],
+            'customer_email': body['customer_email'],
             "order_status": "selection"
         })
         selection = dict(enumerate(menu_tb.get_item(Key={'menu_id': body.get('menu_id')}).get('Item').get('selection'), 1))
